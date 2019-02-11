@@ -18,3 +18,5 @@ public:
     std::string getFilePath();
     void setFilePath(const std::string path);
 };
+
+std::string formatLine (std::string s);
