@@ -13,6 +13,7 @@ TEST_CASE("Test init config", "[ConfigParser][InitConfig]") {
     ConfigParser cp;
     REQUIRE_FALSE(cp.initConfig("") == true);
     REQUIRE_FALSE(cp.initConfig("_ERROR_") == true);
+    REQUIRE_FALSE(cp.initConfig("data/config_incorrect.ini") == true);
     REQUIRE(cp.initConfig("data/config.ini") == true);
-
+    
 }

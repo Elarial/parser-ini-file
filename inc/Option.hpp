@@ -3,12 +3,19 @@
 class Option
 {
 private:
-    char optionChar;
+    std::string optionString;
     std::string helpString;
-    bool isMandatory;
+    std::string isMandatory;
 public:
-    char getOptionChar();
+    std::string getOptionString();
+    void setOptionString(const std::string s);
     std::string getHelpString();
-    bool getIsMandatory();
-    Option(char optionChar,std::string helpString,bool isMandatory);
+    void setHelpString(const std::string helpString);
+    std::string getIsMandatory();
+    void setIsMandatory(const std::string s);
+    bool isComplete();
+    void clear();
+    Option();
+    Option(const std::string optionString,const std::string helpString,const std::string isMandatory);
+
 };
